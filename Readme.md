@@ -1,5 +1,9 @@
 # ADC Project
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg)
+![Made with VSCode](https://img.shields.io/badge/Made%20with-VSCode-1f425f.svg)
+
 This project is developed using PlatformIO and is focused on Analog-to-Digital Conversion (ADC).
 
 ## Table of Contents
@@ -101,4 +105,4 @@ Where:
 Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](http://_vscodecontentref_/1) file for details.
