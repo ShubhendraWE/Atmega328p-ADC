@@ -64,6 +64,39 @@ The following are the register definitions used in this project for the ATmega32
     platformio device monitor
     ```
 
+## Converting ADC Value to float(in Volts)
+
+#### Step 1: Measure AVCC using the 1.1V Internal Reference
+- The ATmega328P allows you to measure AVCC by setting the ADC input to the internal 1.1V reference (ADC channel 14).
+- Since the ADC reference is set to AVCC, the ADC reading gives the ratio of 1.1V to AVCC.
+- The formula to calculate AVCC is:
+*** 
+  $$
+  A_{VCC} = \frac{1.1V \times 1024 }{ADC_{Readings}}
+  $$
+
+Where:
+
+- $A_{VCC}$ = Voltage received at Analog Vcc pin
+- $ADC_{Readings}$ = ADC reading at channel 14(internal ADC channel for $V_{ref}$)
+
+***
+
+#### Step 2: Use AVCC to Convert ADC Readings to Voltage
+-	Once you have AVCC, you can convert any ADC reading using:
+
+* * *
+
+  $$
+   V_{in} = \frac{ADC_{Readings} \times A_{VCC}}{1024}
+  $$
+
+Where:
+  - $V_{in}$ = Voltage at analog pin ($A_{0}$ - $A_ {5}$)
+  - $ADC_{Readings}$ = 10 bit ADC reading at  analog pin ($A_{0}$ - $A_ {5}$)
+
+* * *
+
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
 
